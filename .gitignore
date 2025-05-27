@@ -1,0 +1,19 @@
+#custom
+.vscode/
+build/
+.DS_Store
+.venv/
+data/*
+!data/out.caida
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
