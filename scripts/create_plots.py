@@ -15,6 +15,7 @@ INSTANCES_FOR_RELATIVE_ERROR_PLOT = ["dblp", "trackers", "soc-LiveJournal", "ork
 INSTANCES_FOR_VARIANCE_PLOT = ["dblp", "trackers", "orkut", "friendster"]
 INSTANCES_FOR_VARIANCE_IN_PARAMETER_S_PLOT = ["trackers","orkut","reuters","dblp"]
 INSTANCES_FOR_TABLES = ["movielens-10m", "dblp", "reuters", "livejournal-groups", "trackers", "orkut", "pubmed", "flickr", "soc-LiveJournal","friendster"]
+INSTANCE_FOR_RUNTIME_PLOT = "reuters"
 
 # --- Configuration ---
 sns.set_theme(style="whitegrid")
@@ -183,7 +184,7 @@ def plot_runtime(df, stats, output_dir):
 
     # 3. Runtime vs k
     fig, ax = plt.subplots(figsize=(2.82, 1.7))
-    rdf = df[df['instance'] == "reuters"].groupby(['k', 'algo'], as_index=False).agg({'runtime': 'mean'}).sort_values('k')
+    rdf = df[df['instance'] == INSTANCE_FOR_RUNTIME_PLOT].groupby(['k', 'algo'], as_index=False).agg({'runtime': 'mean'}).sort_values('k')
     
     for algo in rdf['algo'].unique():
         adf = rdf[rdf['algo'] == algo]
@@ -276,6 +277,7 @@ if __name__ == "__main__":
         INSTANCES_FOR_TABLES = df['instance'].unique()
         INSTANCES_FOR_VARIANCE_IN_PARAMETER_S_PLOT = [i for i in df['instance'].unique() if not df[(df['instance'] == i) & (df['algo'] == "8-EIS")].empty]
         INSTANCES_FOR_VARIANCE_PLOT = df['instance'].unique()
+        INSTANCE_FOR_RUNTIME_PLOT = df['instance'].unique()[0]
     
     
     # Analysis of parameter s
