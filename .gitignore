@@ -1,0 +1,25 @@
+#custom
+.vscode/
+build/
+.DS_Store
+.venv/
+data/*
+__pycache__/
+out/
+plots/
+
+!data/random*
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+abacus_exe
+fleet_exe
