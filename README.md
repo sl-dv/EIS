@@ -1,5 +1,8 @@
 # EIS: Four-Cycle Counting in Graph Streams
 
+[![DOI](https://zenodo.org/badge/1120214769.svg)](https://doi.org/10.5281/zenodo.18089152)
+
+
 ## Compiling
 
 Before building, ensure you have:
