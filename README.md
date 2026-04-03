@@ -2,6 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/1120214769.svg)](https://doi.org/10.5281/zenodo.18089152)
 
+This repo contains the code for our KDD'26 paper "Four-Cycle Counting in Low-Degeneracy Graph Streams"
 
 ## Compiling
 
